@@ -2,12 +2,13 @@ package synchornized;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ListTest
 {
     public static void main (String [] arg) throws InterruptedException
     {
-        List<String> list = new ArrayList<String>();
+        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<String>();
         for (int i = 0; i < 10000; i++)
         {
             new Thread(()->{
@@ -15,7 +16,7 @@ public class ListTest
             }).start();
         }
 
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         System.err.println(list.size());
     }
 }
