@@ -8,6 +8,9 @@ import server.prepare.sax.Employee;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * web.xml解析器
+ * */
 public class WebHandler extends DefaultHandler
 {
     private List<Entry> entryList;

@@ -33,9 +33,12 @@ public class XmlTest
 
 
         WebContext webContext = new WebContext(entryList, mappingList);
+        //根据url获取类路径
         String className = webContext.getClzByUrl("/log");
+        //通过反射获取类与对象
         Class<?> aClass = Class.forName(className);
         Servlet servlet = (Servlet) aClass.getConstructor().newInstance();
+        //调用对象方法
         servlet.start();
 
     }

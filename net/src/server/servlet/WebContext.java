@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 分析url与clz关系
+ * */
 public class WebContext
 {
     private List<Entry> entryList;
@@ -32,6 +35,9 @@ public class WebContext
         }
     }
 
+    /**
+     * 根据url获取类路径clz
+     * */
     public String getClzByUrl (String url)
     {
         String name = patternMap.get(url);
