@@ -48,7 +48,6 @@ public class Server04
 
             Response response = new Response (client);
             //响应内容
-            StringBuilder context = new StringBuilder ();
             response.println ("<html>");
             response.println ("<p>");
             response.println ("访问成功！" + request.getValue ("user"));
